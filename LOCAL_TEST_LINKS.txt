@@ -1,0 +1,40 @@
+====================================================================
+           TEAM 7 STEAK HOUSE - LOCAL ACCESS & TEST LINKS
+====================================================================
+
+1. GUEST ORDERING (CUSTOMER QR MENUS)
+   Table 1 (T-01):
+   http://localhost/guest?qr=wcOYvOyI1xQ25WE9d7AoS_1hqW88D9wi8lv89OYEcbI
+
+   Table 2 (T-02):
+   http://localhost/guest?qr=OJMQTN93BaVoyT9xn_iwMfUWEsXMd8msIlCijuWADSg
+
+   Table 3 (T-03):
+   http://localhost/guest?qr=AeGeUPKU31XOEgCoydP909G7Vz5s7Vq1ZcnjDyQlXKs
+
+2. STAFF / ADMIN LOGIN
+   http://localhost/login
+   
+   Login Credentials:
+   - Admin:   admin   / Admin@123
+   - Cashier: cashier / Cashier@123
+   - Kitchen: chef    / Chef@123
+
+3. CASHIER DASHBOARD (Table Overview, Bill Management, Receipts)
+   http://localhost/cashier
+
+4. KITCHEN DISPLAY SYSTEM (Live Order Queue)
+   http://localhost/kitchen
+
+5. ADMIN BACKOFFICE (Menu Management, Categories, Modifiers, Tables, Reports)
+   http://localhost/admin
+
+--------------------------------------------------------------------
+ALTERNATIVE VITE DEV SERVER (Hot Reload Port 5173):
+--------------------------------------------------------------------
+- Table 1 Menu: http://localhost:5173/guest?qr=wcOYvOyI1xQ25WE9d7AoS_1hqW88D9wi8lv89OYEcbI
+- Login:        http://localhost:5173/login
+- Cashier:      http://localhost:5173/cashier
+- Kitchen:      http://localhost:5173/kitchen
+- Admin:        http://localhost:5173/admin
+====================================================================

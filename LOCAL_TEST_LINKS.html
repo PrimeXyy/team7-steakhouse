@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Team 7 Steak House - Local Test Dashboard</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #121110;
+      color: #e5e5e5;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 680px;
+      width: 100%;
+      background: #1c1917;
+      border: 1px solid #78350f;
+      border-radius: 12px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    h1 {
+      color: #f59e0b;
+      margin-top: 0;
+      font-size: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #292524;
+      padding-bottom: 16px;
+    }
+    .card {
+      background: #262320;
+      border: 1px solid #44403c;
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+      transition: border-color 0.2s;
+    }
+    .card:hover {
+      border-color: #f59e0b;
+    }
+    .title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #fafaf9;
+      margin-bottom: 6px;
+    }
+    .desc {
+      font-size: 13px;
+      color: #a8a29e;
+      margin-bottom: 12px;
+    }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .btn {
+      display: inline-block;
+      background: #d97706;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 8px 16px;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #f59e0b;
+    }
+    .btn-secondary {
+      background: #3b3630;
+      color: #fbbf24;
+      border: 1px solid #78350f;
+    }
+    .btn-secondary:hover {
+      background: #4a433d;
+    }
+    .creds {
+      background: #171614;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-family: monospace;
+      font-size: 12px;
+      color: #fbbf24;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Team 7 Steak House &mdash; Quick Launcher</h1>
+    <p style="color: #a8a29e; font-size: 14px;">Click any button below to launch that view in your browser:</p>
+
+    <div class="card">
+      <div class="title">1. Guest Ordering (Customer QR Menus)</div>
+      <div class="desc">View the luxury steakhouse guest menu, select meat cuts, temperature, butters, and place orders.</div>
+      <div class="btn-group">
+        <a class="btn" href="http://localhost/guest?qr=wcOYvOyI1xQ25WE9d7AoS_1hqW88D9wi8lv89OYEcbI" target="_blank">Open Table 1 (T-01)</a>
+        <a class="btn btn-secondary" href="http://localhost/guest?qr=OJMQTN93BaVoyT9xn_iwMfUWEsXMd8msIlCijuWADSg" target="_blank">Open Table 2 (T-02)</a>
+        <a class="btn btn-secondary" href="http://localhost/guest?qr=AeGeUPKU31XOEgCoydP909G7Vz5s7Vq1ZcnjDyQlXKs" target="_blank">Open Table 3 (T-03)</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="title">2. Staff / Admin Login</div>
+      <div class="desc">Sign in as an administrator, cashier, or chef to access internal portals.</div>
+      <div class="creds">
+        Admin: admin / Admin@123<br>
+        Cashier: cashier / Cashier@123<br>
+        Kitchen: chef / Chef@123
+      </div>
+      <br>
+      <a class="btn" href="http://localhost/login" target="_blank">Open Login Page</a>
+    </div>
+
+    <div class="card">
+      <div class="title">3. Cashier Dashboard</div>
+      <div class="desc">Manage dine-in tables, view active sessions, split bills, and print guest receipts.</div>
+      <a class="btn" href="http://localhost/cashier" target="_blank">Open Cashier Board</a>
+    </div>
+
+    <div class="card">
+      <div class="title">4. Kitchen Display System</div>
+      <div class="desc">Live order queue for the grill station with real-time status transitions.</div>
+      <a class="btn" href="http://localhost/kitchen" target="_blank">Open Kitchen Queue</a>
+    </div>
+
+    <div class="card">
+      <div class="title">5. Admin Backoffice</div>
+      <div class="desc">Full control of the menu items, steak temperature modifier groups, tables, and accounts.</div>
+      <a class="btn" href="http://localhost/admin" target="_blank">Open Admin Portal</a>
+    </div>
+  </div>
+</body>
+</html>

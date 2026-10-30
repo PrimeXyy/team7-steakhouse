@@ -1,3 +1,4 @@
+import { ThemeProvider } from "next-themes"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 
 import { Toaster } from "@/components/ui/sonner"
@@ -15,13 +16,20 @@ const queryClient = new QueryClient({
 
 export function AppProviders({ children }: { children: React.ReactNode }) {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider delayDuration={0}>
-        <LanguageProvider>
-          {children}
-          <Toaster />
-        </LanguageProvider>
-      </TooltipProvider>
-    </QueryClientProvider>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="dark"
+      enableSystem={false}
+      storageKey="theme"
+    >
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider delayDuration={0}>
+          <LanguageProvider>
+            {children}
+            <Toaster />
+          </LanguageProvider>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ThemeProvider>
   )
 }

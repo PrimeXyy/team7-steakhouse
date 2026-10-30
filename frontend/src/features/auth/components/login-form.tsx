@@ -66,7 +66,7 @@ export function LoginForm({
             alt="Team 7 Steak House"
             className="mx-auto mb-3 size-16 rounded-full border-2 border-amber-500/40 shadow-lg object-cover ring-4 ring-amber-500/10"
           />
-          <CardTitle className="text-2xl font-heading tracking-wider uppercase text-amber-500 dark:text-amber-400 font-bold">
+          <CardTitle className="text-2xl font-heading tracking-wider uppercase text-amber-600 dark:text-amber-400 font-bold">
             Team 7 Steak House
           </CardTitle>
           <CardDescription className="text-xs uppercase tracking-widest text-muted-foreground font-medium">

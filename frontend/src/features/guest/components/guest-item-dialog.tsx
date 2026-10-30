@@ -216,7 +216,7 @@ export function GuestItemDialog({ item, onOpenChange, editLine }: GuestItemDialo
           <div className="p-6 pt-4 pb-0">
             <DialogHeader>
               <DialogTitle className="text-xl font-heading tracking-wide font-bold">{title}</DialogTitle>
-              <DialogDescription className="text-sm font-mono text-amber-500 dark:text-amber-400 font-semibold">
+              <DialogDescription className="text-sm font-mono text-amber-700 dark:text-amber-400 font-semibold">
                 {formatPrice(item.price, item.currencyCode)}
                 {subtitleName ? ` · ${subtitleName}` : ""}
               </DialogDescription>

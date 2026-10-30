@@ -143,7 +143,7 @@ export function GuestMenuBrowser({ onPick }: GuestMenuBrowserProps) {
             "h-8 px-3.5 text-xs font-heading tracking-wider uppercase font-semibold transition-all shrink-0 cursor-pointer",
             categoryId === undefined
               ? "bg-amber-500 text-stone-950 shadow-md shadow-amber-500/20 hover:bg-amber-400"
-              : "border-stone-800 bg-stone-900/50 text-stone-300 hover:border-amber-500/50 hover:text-amber-300"
+              : "border-border bg-card text-muted-foreground hover:border-amber-500/50 hover:text-foreground dark:border-stone-800 dark:bg-stone-900/50 dark:text-stone-300 dark:hover:text-amber-300"
           )}
         >
           <button type="button" onClick={() => pickCategory(undefined)}>
@@ -159,7 +159,7 @@ export function GuestMenuBrowser({ onPick }: GuestMenuBrowserProps) {
               "h-8 px-3.5 text-xs font-heading tracking-wider uppercase font-semibold transition-all shrink-0 cursor-pointer",
               categoryId === category.id
                 ? "bg-amber-500 text-stone-950 shadow-md shadow-amber-500/20 hover:bg-amber-400"
-                : "border-stone-800 bg-stone-900/50 text-stone-300 hover:border-amber-500/50 hover:text-amber-300"
+                : "border-border bg-card text-muted-foreground hover:border-amber-500/50 hover:text-foreground dark:border-stone-800 dark:bg-stone-900/50 dark:text-stone-300 dark:hover:text-amber-300"
             )}
           >
             <button type="button" onClick={() => pickCategory(category.id)}>
@@ -222,8 +222,8 @@ export function GuestMenuBrowser({ onPick }: GuestMenuBrowserProps) {
                 onClick={() => onPick(item)}
                 disabled={!item.available}
                 className={cn(
-                  "group bg-card hover:border-amber-500/60 flex flex-col overflow-hidden rounded-xl border border-stone-800/80 text-left relative",
-                  "transition-all duration-300 hover:shadow-xl hover:shadow-amber-950/25 hover:-translate-y-0.5",
+                  "group bg-card hover:border-amber-500/60 flex flex-col overflow-hidden rounded-xl border border-border dark:border-stone-800/80 text-left relative",
+                  "transition-all duration-300 hover:shadow-lg hover:shadow-amber-950/10 dark:hover:shadow-xl dark:hover:shadow-amber-950/25 hover:-translate-y-0.5",
                   !item.available && "opacity-50 cursor-not-allowed hover:translate-y-0 hover:shadow-none"
                 )}
               >
@@ -257,7 +257,7 @@ export function GuestMenuBrowser({ onPick }: GuestMenuBrowserProps) {
                   )}
                 </div>
                 <div className="flex flex-1 flex-col gap-1 p-2.5">
-                  <span className="line-clamp-2 text-sm font-serif font-bold text-foreground group-hover:text-amber-400 transition-colors leading-snug">
+                  <span className="line-clamp-2 text-sm font-serif font-bold text-foreground group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors leading-snug">
                     {primaryName}
                   </span>
                   {secondaryName && (
@@ -265,7 +265,7 @@ export function GuestMenuBrowser({ onPick }: GuestMenuBrowserProps) {
                       {secondaryName}
                     </span>
                   )}
-                  <span className="text-amber-500 dark:text-amber-400 mt-auto text-sm font-mono font-semibold tabular-nums">
+                  <span className="text-amber-600 dark:text-amber-400 mt-auto text-sm font-mono font-semibold tabular-nums">
                     {formatPrice(item.price, item.currencyCode)}
                   </span>
                 </div>

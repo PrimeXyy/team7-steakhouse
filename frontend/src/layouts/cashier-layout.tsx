@@ -11,6 +11,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { ThemeToggle } from "@/components/shared/theme-toggle"
 import { clearToken, getUsername } from "@/lib/auth/token"
 
 export function CashierLayout() {
@@ -32,32 +33,35 @@ export function CashierLayout() {
             className="size-8 rounded-lg object-cover border border-amber-500/40 shadow-sm shrink-0"
           />
           <div className="grid text-left text-sm leading-tight">
-            <span className="font-heading tracking-wider uppercase text-amber-500 dark:text-amber-400 font-bold">
+            <span className="font-heading tracking-wider uppercase text-amber-600 dark:text-amber-400 font-bold">
               Team 7 Steak House
             </span>
             <span className="text-muted-foreground text-xs font-medium">Cashier &amp; Till</span>
           </div>
         </NavLink>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button variant="ghost" className="gap-2 px-2">
-              <Avatar className="size-8 rounded-lg">
-                <AvatarFallback className="rounded-lg uppercase">
-                  {username.slice(0, 2)}
-                </AvatarFallback>
-              </Avatar>
-              <span className="hidden sm:inline">{username}</span>
-            </Button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="end">
-            <DropdownMenuLabel>{username}</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem onSelect={logout}>
-              <LogOut />
-              Sign out
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" className="gap-2 px-2">
+                <Avatar className="size-8 rounded-lg">
+                  <AvatarFallback className="rounded-lg uppercase">
+                    {username.slice(0, 2)}
+                  </AvatarFallback>
+                </Avatar>
+                <span className="hidden sm:inline">{username}</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuLabel>{username}</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem onSelect={logout}>
+                <LogOut />
+                Sign out
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
       </header>
       <main className="flex flex-1 flex-col gap-4 p-4 md:p-6">
         <Outlet />

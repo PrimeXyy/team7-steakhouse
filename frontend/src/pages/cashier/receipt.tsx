@@ -56,7 +56,7 @@ export function ReceiptPage() {
                 <div className="bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 mx-auto mb-2 flex size-10 items-center justify-center rounded-full">
                   <Check className="size-5" />
                 </div>
-                <p className="text-lg font-heading font-bold uppercase tracking-wider text-amber-500 dark:text-amber-400">
+                <p className="text-lg font-heading font-bold uppercase tracking-wider text-amber-700 dark:text-amber-400">
                   {receipt.restaurantName ?? "Team 7 Steak House"}
                 </p>
                 <p className="text-muted-foreground text-sm">

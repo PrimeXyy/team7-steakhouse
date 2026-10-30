@@ -18,7 +18,7 @@ const stateStyles: Record<DerivedTableState, { card: string; badge: string }> = 
   },
   WAITING: {
     card: "border-amber-400 bg-amber-100 hover:border-amber-500 dark:border-amber-500/60 dark:bg-amber-500/20 dark:hover:border-amber-400",
-    badge: "bg-amber-500 text-white",
+    badge: "bg-amber-500 text-amber-950 font-bold",
   },
   READY_TO_SERVE: {
     card: "border-blue-300 bg-blue-50 hover:border-blue-500 dark:border-blue-500/40 dark:bg-blue-500/10 dark:hover:border-blue-500",
@@ -83,7 +83,7 @@ export function TableBoardCard({ table, busy, onClick, selected }: TableBoardCar
           <Receipt className="size-3.5" />
         </Link>
       )}
-      <span className="text-2xl font-heading font-bold tracking-wider text-amber-500 dark:text-amber-400">
+      <span className="text-2xl font-heading font-bold tracking-wider text-amber-700 dark:text-amber-400">
         {table.tableNumber}
       </span>
       <span

@@ -4,13 +4,13 @@
 
 1. GUEST ORDERING (CUSTOMER QR MENUS)
    Table 1 (T-01):
-   http://localhost/guest?qr=wcOYvOyI1xQ25WE9d7AoS_1hqW88D9wi8lv89OYEcbI
+   http://localhost/guest?qr=01poj-4kXj-IGX67mGjBdmosXLD-H5l4eNkAs_o78wE
 
    Table 2 (T-02):
    http://localhost/guest?qr=OJMQTN93BaVoyT9xn_iwMfUWEsXMd8msIlCijuWADSg
 
    Table 3 (T-03):
-   http://localhost/guest?qr=AeGeUPKU31XOEgCoydP909G7Vz5s7Vq1ZcnjDyQlXKs
+   http://localhost/guest?qr=VknkMjBjWAVMfG_hcX_5ETrXAzDyK8znECn2Yx1oL5Y
 
 2. STAFF / ADMIN LOGIN
    http://localhost/login

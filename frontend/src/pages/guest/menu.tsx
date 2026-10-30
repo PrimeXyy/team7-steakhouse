@@ -25,30 +25,30 @@ export function GuestMenuPage() {
         <h1 className="text-xl font-heading tracking-wide text-foreground">{t("menu")}</h1>
         <Button variant="outline" size="sm" asChild className="border-amber-500/30 hover:border-amber-500/60">
           <Link to="/guest/cart" className="flex items-center gap-2">
-            <ShoppingCart className="size-4 text-amber-500" />
+            <ShoppingCart className="size-4 text-amber-600 dark:text-amber-400" />
             <span className="font-medium">{t("cart")}</span>
           </Link>
         </Button>
       </div>
 
       {/* Atmospheric Steakhouse Welcome Banner */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-stone-900 via-stone-900 to-amber-950/40 p-4 border border-amber-500/25 shadow-lg shadow-black/40">
+      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-100/70 via-stone-100 to-amber-50/50 dark:from-stone-900 dark:via-stone-900 dark:to-amber-950/40 p-4 border border-amber-500/30 dark:border-amber-500/25 shadow-sm dark:shadow-lg dark:shadow-black/40">
         <div className="flex items-center justify-between gap-3">
           <div className="space-y-1">
             <div className="flex items-center gap-2">
               <span className="size-2 rounded-full bg-amber-500 animate-pulse" />
-              <span className="text-[10px] uppercase tracking-widest text-amber-400 font-semibold">
+              <span className="text-[10px] uppercase tracking-widest text-amber-700 dark:text-amber-400 font-semibold">
                 USDA Prime Cuts &amp; Fire Grill
               </span>
             </div>
-            <h2 className="text-lg font-heading font-bold tracking-wide text-amber-100">
+            <h2 className="text-lg font-heading font-bold tracking-wide text-amber-950 dark:text-amber-100">
               Team 7 Steak House
             </h2>
-            <p className="text-xs text-amber-200/70 font-light">
+            <p className="text-xs text-amber-900/80 dark:text-amber-200/70 font-medium dark:font-light">
               45-Day Dry Aged · Artisan Butters · Cellar Wine
             </p>
           </div>
-          <div className="size-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-2xl shrink-0 shadow-inner">
+          <div className="size-12 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-2xl shrink-0 shadow-inner">
             🥩
           </div>
         </div>

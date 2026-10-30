@@ -42,7 +42,7 @@ function playBeep() {
     gain.gain.setValueAtTime(0.1, audioCtx.currentTime)
     osc.start()
     osc.stop(audioCtx.currentTime + 0.2)
-  } catch (e) {
+  } catch {
     // ignore
   }
 }

@@ -14,6 +14,7 @@ import {
   SidebarProvider,
   SidebarTrigger,
 } from "@/components/ui/sidebar"
+import { ThemeToggle } from "@/components/shared/theme-toggle"
 import { AdminSidebar } from "./admin-sidebar"
 
 const sectionTitles: Record<string, string> = {
@@ -32,28 +33,33 @@ export function AdminLayout() {
     <SidebarProvider>
       <AdminSidebar />
       <SidebarInset>
-        <header className="flex h-14 shrink-0 items-center gap-2 border-b px-4">
-          <SidebarTrigger className="-ml-1" />
-          <Separator orientation="vertical" className="mr-2 !h-4" />
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                {section ? (
-                  <BreadcrumbLink href="/admin">Admin</BreadcrumbLink>
-                ) : (
-                  <BreadcrumbPage>Overview</BreadcrumbPage>
+        <header className="flex h-14 shrink-0 items-center justify-between gap-2 border-b px-4">
+          <div className="flex items-center gap-2">
+            <SidebarTrigger className="-ml-1" />
+            <Separator orientation="vertical" className="mr-2 !h-4" />
+            <Breadcrumb>
+              <BreadcrumbList>
+                <BreadcrumbItem>
+                  {section ? (
+                    <BreadcrumbLink href="/admin">Admin</BreadcrumbLink>
+                  ) : (
+                    <BreadcrumbPage>Overview</BreadcrumbPage>
+                  )}
+                </BreadcrumbItem>
+                {section && (
+                  <>
+                    <BreadcrumbSeparator />
+                    <BreadcrumbItem>
+                      <BreadcrumbPage>{section}</BreadcrumbPage>
+                    </BreadcrumbItem>
+                  </>
                 )}
-              </BreadcrumbItem>
-              {section && (
-                <>
-                  <BreadcrumbSeparator />
-                  <BreadcrumbItem>
-                    <BreadcrumbPage>{section}</BreadcrumbPage>
-                  </BreadcrumbItem>
-                </>
-              )}
-            </BreadcrumbList>
-          </Breadcrumb>
+              </BreadcrumbList>
+            </Breadcrumb>
+          </div>
+          <div className="flex items-center gap-2">
+            <ThemeToggle />
+          </div>
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 md:p-6">
           <Outlet />

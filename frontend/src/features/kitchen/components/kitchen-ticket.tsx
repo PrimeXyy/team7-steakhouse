@@ -135,7 +135,7 @@ export function KitchenTicket({
           className={cn(
             "rounded-md px-3 py-1.5 text-2xl font-bold tabular-nums text-center min-w-[70px]",
             !warn && !urgent && "bg-muted text-muted-foreground",
-            warn && "bg-amber-500 text-amber-50",
+            warn && "bg-amber-500 text-amber-950 font-black",
             urgent && "bg-destructive text-destructive-foreground animate-pulse"
           )}
         >
@@ -185,7 +185,7 @@ export function KitchenTicket({
             Bump
           </Button>
         ) : column === "READY" ? (
-          <div className="w-full text-center py-2 rounded bg-emerald-500/10 text-emerald-700 font-semibold border border-emerald-500/20">
+          <div className="w-full text-center py-2 rounded bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 font-semibold border border-emerald-500/20">
             Ready to Serve
           </div>
         ) : null}

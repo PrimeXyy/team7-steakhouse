@@ -81,7 +81,7 @@ export function AdminSidebar() {
                   className="size-8 rounded-lg object-cover border border-amber-500/40 shadow-sm shrink-0"
                 />
                 <div className="grid flex-1 text-left text-sm leading-tight">
-                  <span className="truncate font-heading tracking-wider uppercase text-amber-500 dark:text-amber-400 font-bold">
+                  <span className="truncate font-heading tracking-wider uppercase text-amber-600 dark:text-amber-400 font-bold">
                     Team 7 Steak House
                   </span>
                   <span className="text-muted-foreground truncate text-xs font-medium">

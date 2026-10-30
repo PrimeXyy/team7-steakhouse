@@ -1,6 +1,7 @@
 import { Outlet } from "react-router"
 
 import { LanguageToggle } from "@/components/shared/language-toggle"
+import { ThemeToggle } from "@/components/shared/theme-toggle"
 import { useGuestSession } from "@/features/guest/hooks/use-guest-session"
 import { useLanguage } from "@/lib/language-context"
 
@@ -22,7 +23,7 @@ export function GuestLayout() {
             className="size-8 rounded-lg object-cover border border-amber-500/40 shadow-sm shrink-0"
           />
           <div className="grid text-left text-sm leading-tight">
-            <span className="font-heading tracking-wider uppercase text-amber-500 dark:text-amber-400 font-bold">
+            <span className="font-heading tracking-wider uppercase text-amber-600 dark:text-amber-400 font-bold">
               Team 7 Steak House
             </span>
             <span className="text-muted-foreground text-xs font-medium">
@@ -33,7 +34,10 @@ export function GuestLayout() {
           </div>
         </div>
 
-        <LanguageToggle />
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <LanguageToggle />
+        </div>
       </header>
       <main className="mx-auto flex w-full max-w-md flex-1 flex-col gap-4 p-4">
         <Outlet />
